@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureTableStorageConverter", "AzureTableStorageConverter\AzureTableStorageConverter.csproj", "{AE17227A-2B66-46B4-972D-279725A8AE90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureTableStorageConverterTests", "AzureTableStorageConverterTests\AzureTableStorageConverterTests.csproj", "{FE0AF38B-A23F-4E34-BE69-0E87084D6008}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE17227A-2B66-46B4-972D-279725A8AE90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE17227A-2B66-46B4-972D-279725A8AE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE17227A-2B66-46B4-972D-279725A8AE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE17227A-2B66-46B4-972D-279725A8AE90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE0AF38B-A23F-4E34-BE69-0E87084D6008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE0AF38B-A23F-4E34-BE69-0E87084D6008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE0AF38B-A23F-4E34-BE69-0E87084D6008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE0AF38B-A23F-4E34-BE69-0E87084D6008}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D894ABDC-EAC3-44BC-B73F-FDCDE9157EC7}
+	EndGlobalSection
+EndGlobal

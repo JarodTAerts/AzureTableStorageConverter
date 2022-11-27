@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uAJNN+HFl82nwhII9svOVkHfftBJGLjQ6ZllAp51O/kBa8Ek6auKSRPRtH7LnMmCLhytV8H1kCcqJNHoilalHw==",
+  "dgSpecHash": "7Fr4G+7GrH5yR5expn4o4/9ODGYEgVABxCtBpwuooXom9uNDwOoxdUu/WSTYPXaC7VBho03hUjKJyjU07N6Wqg==",
   "success": true,
   "projectFilePath": "/Users/jarodaerts/source/repos/AzureTableStorageConverter/AzureTableStorageConverterTests/AzureTableStorageConverterTests.csproj",
   "expectedPackageFiles": [

@@ -24,16 +24,32 @@ public class TableEntityConverter
 
         foreach (var prop in type.GetProperties())
         {
-            if (prop.Name.Equals(_partitionKey) && prop.GetValue(obj) == null)
+            if (prop.Name.Equals(_partitionKey))
             {
-                // PartitionKey is not set so we assume this is a first time create for this table entity and willset it with YYYY-MM
-                returnTableEntity.PartitionKey = $"{DateTime.Now.Year}-{DateTime.Now.Month}";
+                if (prop.GetValue(obj) == null)
+                {
+                    // PartitionKey is not set so we assume this is a first time create for this table entity and willset it with YYYY-MM
+                    returnTableEntity.PartitionKey = $"{DateTime.Now.Year}-{DateTime.Now.Month}";
+                }
+                else
+                {
+                    returnTableEntity.PartitionKey = (string)prop.GetValue(obj);
+                }
+
                 continue;
             }
-            else if (prop.Name.Equals(_rowKey) && prop.GetValue(obj) == null)
+            else if (prop.Name.Equals(_rowKey))
             {
-                // RowKey is not set so we assume this is a first time create for this table entity and willset it with a guid
-                returnTableEntity.RowKey = Guid.NewGuid().ToString();
+                if (prop.GetValue(obj) == null)
+                {
+                    // RowKey is not set so we assume this is a first time create for this table entity and willset it with a guid
+                    returnTableEntity.RowKey = Guid.NewGuid().ToString();
+                }
+                else
+                {
+                    returnTableEntity.RowKey = (string)prop.GetValue(obj);
+                }
+
                 continue;
             }
 

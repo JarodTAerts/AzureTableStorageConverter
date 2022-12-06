@@ -5,7 +5,7 @@
   },
   "projects": {
     "/Users/jarodaerts/source/repos/AzureTableStorageConverter/AzureTableStorageConverter/AzureTableStorageConverter.csproj": {
-      "version": "1.0.2",
+      "version": "1.0.5",
       "restore": {
         "projectUniqueName": "/Users/jarodaerts/source/repos/AzureTableStorageConverter/AzureTableStorageConverter/AzureTableStorageConverter.csproj",
         "projectName": "AzureTableStorageConverter",

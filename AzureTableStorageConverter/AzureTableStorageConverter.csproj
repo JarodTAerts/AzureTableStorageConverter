@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
     <PackageId>AzureTableStorageConverter</PackageId>
-    <Version>1.0.2</Version>
+    <Version>1.0.5</Version>
     <Authors>Jarod Aerts</Authors>
     <Company>Jarod Aerts</Company>
     <PackageReadmeFile>README.md</PackageReadmeFile>

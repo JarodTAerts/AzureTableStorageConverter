@@ -24,6 +24,18 @@ public class TableEntityConverter
 
         foreach (var prop in type.GetProperties())
         {
+            if (prop.GetSetMethod() == null)
+            {
+                continue;
+            }
+
+            var convertProps = GetTableConverterPropertiesAttribute(prop);
+            if (convertProps.Ignore)
+            {
+                // If the ignore attribute is set we will not try to get the column from the DB, is is likely done later
+                continue;
+            }
+
             if (prop.Name.Equals(_partitionKey))
             {
                 if (prop.GetValue(obj) == null)
@@ -88,6 +100,18 @@ public class TableEntityConverter
 
         foreach (var prop in typeProperties)
         {
+            if (prop.GetSetMethod() == null)
+            {
+                continue;
+            }
+
+            var convertProps = GetTableConverterPropertiesAttribute(prop);
+            if (convertProps.Ignore)
+            {
+                // If the ignore attribute is set we will not try to get the column from the DB, is is likely done later
+                continue;
+            }
+
             if (prop.Name.Equals(_partitionKey))
             {
                 // PartitionKey is not set so we assume this is a first time create for this table entity and willset it with YYYY-MM
@@ -188,6 +212,21 @@ public class TableEntityConverter
     public static T? DeserializeJson<T>(string jsonString)
     {
         return JsonSerializer.Deserialize<T>(jsonString);
+    }
+
+    private static TableConverterProperties GetTableConverterPropertiesAttribute(PropertyInfo prop)
+    {
+        object[] attrs = prop.GetCustomAttributes(true);
+        foreach (object attr in attrs)
+        {
+            TableConverterProperties converterProps = attr as TableConverterProperties;
+            if (converterProps != null)
+            {
+                return converterProps;
+            }
+        }
+
+        return new TableConverterProperties(false);
     }
 }
 

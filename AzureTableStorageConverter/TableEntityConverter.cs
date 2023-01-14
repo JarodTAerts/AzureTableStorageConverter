@@ -70,7 +70,7 @@ public class TableEntityConverter
 
             if (propValue != null)
             {
-                if (prop.PropertyType == typeof(DateTime))
+                if (prop.PropertyType == typeof(DateTime) || prop.PropertyType == typeof(DateTime?))
                 {
                     // Convert datetime to UTC if it is not already. This is required by Azure
                     DateTime utcDateTime = ((DateTime)propValue).ToUniversalTime();
@@ -174,19 +174,19 @@ public class TableEntityConverter
         {
             return tableEntity.GetString(columnName);
         }
-        else if (propType == typeof(int))
+        else if (propType == typeof(int) || propType == typeof(int?))
         {
             return tableEntity.GetInt32(columnName);
         }
-        else if (propType == typeof(double))
+        else if (propType == typeof(double) || propType == typeof(double?))
         {
             return tableEntity.GetDouble(columnName);
         }
-        else if (propType == typeof(bool))
+        else if (propType == typeof(bool) || propType == typeof(bool?))
         {
             return tableEntity.GetBoolean(columnName);
         }
-        else if (propType == typeof(DateTime))
+        else if (propType == typeof(DateTime) || propType == typeof(DateTime?))
         {
             return tableEntity.GetDateTime(columnName);
         }

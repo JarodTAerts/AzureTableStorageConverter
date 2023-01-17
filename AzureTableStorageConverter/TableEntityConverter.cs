@@ -70,10 +70,18 @@ public class TableEntityConverter
 
             if (propValue != null)
             {
-                if (prop.PropertyType == typeof(DateTime) || prop.PropertyType == typeof(DateTime?))
+                if (prop.PropertyType == typeof(DateTime))
                 {
                     // Convert datetime to UTC if it is not already. This is required by Azure
                     DateTime utcDateTime = ((DateTime)propValue).ToUniversalTime();
+                    DateTime.SpecifyKind(utcDateTime, DateTimeKind.Utc);
+                    propValue = utcDateTime;
+                }
+
+                if (prop.PropertyType == typeof(DateTime?)) 
+                {
+                    var normalDatetime = ((DateTime?)propValue).Value;
+                    DateTime utcDateTime = normalDatetime.ToUniversalTime();
                     DateTime.SpecifyKind(utcDateTime, DateTimeKind.Utc);
                     propValue = utcDateTime;
                 }
@@ -146,8 +154,10 @@ public class TableEntityConverter
     private static bool IsAzureTableDataType(Type type)
     {
         return type == typeof(BinaryData) || type == typeof(bool) || type == typeof(DateTime)
+            || type == typeof(DateTime?) || type == typeof(bool?) || type == typeof(double?)
             || type == typeof(double) || type == typeof(Guid) || type == typeof(int)
-            || type == typeof(long) || type == typeof(string);
+            || type == typeof(long) || type == typeof(string) || type == typeof(int?)
+            || type == typeof(long?);
     }
 
     private static void CheckRequiredProperty(object propValue, PropertyInfo prop, string objectType = "")

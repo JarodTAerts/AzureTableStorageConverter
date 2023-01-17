@@ -1895,7 +1895,7 @@
           "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
       },
-      "AzureTableStorageConverter/1.0.5": {
+      "AzureTableStorageConverter/1.0.8": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -6403,7 +6403,7 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "AzureTableStorageConverter/1.0.5": {
+    "AzureTableStorageConverter/1.0.8": {
       "type": "project",
       "path": "../AzureTableStorageConverter/AzureTableStorageConverter.csproj",
       "msbuildProject": "../AzureTableStorageConverter/AzureTableStorageConverter.csproj"
@@ -6412,7 +6412,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Azure.Data.Tables >= 12.7.1",
-      "AzureTableStorageConverter >= 1.0.5",
+      "AzureTableStorageConverter >= 1.0.8",
       "Microsoft.NET.Test.Sdk >= 17.3.2",
       "coverlet.collector >= 3.1.2",
       "xunit >= 2.4.2",
@@ -6420,39 +6420,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jaert\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/jarodaerts/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jaert\\source\\repos\\AzureTableStorageConverter\\AzureTableStorageConverterTests\\AzureTableStorageConverterTests.csproj",
+      "projectUniqueName": "/Users/jarodaerts/source/repos/AzureTableStorageConverter/AzureTableStorageConverterTests/AzureTableStorageConverterTests.csproj",
       "projectName": "AzureTableStorageConverterTests",
-      "projectPath": "C:\\Users\\jaert\\source\\repos\\AzureTableStorageConverter\\AzureTableStorageConverterTests\\AzureTableStorageConverterTests.csproj",
-      "packagesPath": "C:\\Users\\jaert\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jaert\\source\\repos\\AzureTableStorageConverter\\AzureTableStorageConverterTests\\obj\\",
+      "projectPath": "/Users/jarodaerts/source/repos/AzureTableStorageConverter/AzureTableStorageConverterTests/AzureTableStorageConverterTests.csproj",
+      "packagesPath": "/Users/jarodaerts/.nuget/packages/",
+      "outputPath": "/Users/jarodaerts/source/repos/AzureTableStorageConverter/AzureTableStorageConverterTests/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\jaert\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/jarodaerts/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\jaert\\source\\repos\\AzureTableStorageConverter\\AzureTableStorageConverter\\AzureTableStorageConverter.csproj": {
-              "projectPath": "C:\\Users\\jaert\\source\\repos\\AzureTableStorageConverter\\AzureTableStorageConverter\\AzureTableStorageConverter.csproj"
+            "/Users/jarodaerts/source/repos/AzureTableStorageConverter/AzureTableStorageConverter/AzureTableStorageConverter.csproj": {
+              "projectPath": "/Users/jarodaerts/source/repos/AzureTableStorageConverter/AzureTableStorageConverter/AzureTableStorageConverter.csproj"
             }
           }
         }
@@ -6508,7 +6502,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }
